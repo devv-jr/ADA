@@ -1,19 +1,18 @@
 ```
- ▄▄▄       ▓█████▄  ▄▄▄      
-▒████▄     ▒██▀ ██▌▒████▄    
-▒██  ▀█▄   ░██   █▌▒██  ▀█▄  
-░██▄▄▄▄██  ░▓█▄   ▌░██▄▄▄▄██ 
- ▓█   ▓██▒ ░▒████▓  ▓█   ▓██▒
- ▒▒   ▓▒█░  ▒▒▓  ▒  ▒▒   ▓▒█░
-  ▒   ▒▒ ░  ░ ▒  ▒   ▒   ▒▒ ░
-  ░   ▒     ░ ░  ░   ░   ▒   
-      ░  ░    ░          ░  ░ 
-           ░                  
+ ▄▄▄       ██▀███  ▓█████   ██████ 
+▒████▄    ▓██ ▒ ██▒▓█   ▀ ▒██    ▒ 
+▒██  ▀█▄  ▓██ ░▄█ ▒▒███   ░ ▓██▄   
+░██▄▄▄▄██ ▒██▀▀█▄  ▒▓█  ▄   ▒   ██▒
+ ▓█   ▓██▒░██▓ ▒██▒░▒████▒▒██████▒▒
+ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+  ▒   ▒▒ ░  ░▒ ░ ▒░ ░ ░  ░░ ░▒  ░ ░
+  ░   ▒     ░░   ░    ░   ░  ░  ░  
+      ░  ░   ░        ░  ░      ░             
 ```
 
 <div align="center">
 
-# ADA — Agente de Defensa Autónomo
+# ARES — Agente de IA para Ciberseguridad
 
 **[ SISTEMA ACTIVO ] [ MODO AGENTE ] [ CIBERSEGURIDAD ]**
 
@@ -30,7 +29,7 @@
 ---
 
 ```
-> Inicializando ADA...
+> Inicializando ARES...
 > Cargando módulos de seguridad... [OK]
 > Conectando con servicios de IA... [OK]
 > Agente listo para operar.
@@ -38,9 +37,9 @@
 
 ---
 
-## `~/` ¿Qué es ADA?
+## `~/` ¿Qué es ARES?
 
-**ADA** (Agente de Defensa Autónomo) es una solución de inteligencia artificial agéntica enfocada en ciberseguridad, diseñada para actuar como asistente técnico accesible desde dispositivos móviles.
+**ARES** es una solución de inteligencia artificial agéntica enfocada en ciberseguridad, diseñada para actuar como asistente técnico accesible desde dispositivos móviles.
 
 El sistema analiza solicitudes del usuario, proporciona explicaciones técnicas, orienta procesos de aprendizaje y ofrece recomendaciones especializadas en seguridad informática, todo a través de una interfaz conversacional impulsada por agentes de IA.
 
@@ -134,25 +133,25 @@ python >= 3.11
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-org/ADA.git
-cd ADA
+git clone https://github.com/devv-jr/ARES.git
+cd ARES
 ```
 
 ### Web App (React + Vite)
 
 ```bash
-cd web
-npm install
-npm run dev
+cd frontend
+pnpm i
+pnpm dev
 ```
 
 ### Backend del agente (Python)
 
 ```bash
 cd agent
-python -m venv .venv
-source .venv/bin/activate      # Linux/macOS
-# .venv\Scripts\activate       # Windows
+python -m venv venv
+source venv/bin/activate      # Linux/macOS
+# venv\Scripts\activate       # Windows
 
 pip install -r requirements.txt
 ```
@@ -193,8 +192,8 @@ EXPO_PUBLIC_API_URL=http://localhost:8000
 ## `~/structure` Estructura del Proyecto
 
 ```
-ADA/
-├── 🌐 web/                     # Web App React + Vite (PWA)
+ARES/
+├── 🌐 frontend/               # Web App React + Vite (PWA)
 │   ├── src/
 │   │   ├── pages/              # Vistas principales
 │   │   ├── components/         # Componentes reutilizables
@@ -202,14 +201,20 @@ ADA/
 │   │   └── services/           # Llamadas al agente
 │   └── public/                 # Assets estáticos + manifest.json
 │
-├── 🤖 agent/                   # Backend Python
-│   ├── core/                   # Lógica del agente
-│   ├── tools/                  # Herramientas del agente
-│   ├── api/                    # Endpoints REST
-│   └── main.py                 # Entry point
+├── 💻 backend/                # API REST y conexión entre el modelo de IA y el Frontend
+│   └── app/
+│       ├── routes/            # Endpoints y rutas de la API (Controladores)
+│       ├── services/          # Lógica de negocio y servicios externos (BD, APIs)
+│       └── main.py            # Archivo principal de arranque de la aplicación (FastAPI/Flask)
+│
+├── 🤖 agent/                  # Módulo del Agente de IA y Configuración del LLM
+│   ├── core/                  # Lógica central del agente, toma de decisiones y memoria
+│   ├── tools/                 # Herramientas y funciones que el agente puede ejecutar
+│   ├── knowledge/             # Base de conocimiento local (Vectores, RAG, documentos)
+│   └── prompts/               # Plantillas de instrucciones y system prompts del sistema
 │
 ├── 📄 docs/                    # Documentación técnica
-└── README.md
+└── README.md                   # Documento principal del proyecto ARES
 ```
 
 ---
@@ -231,7 +236,7 @@ ADA/
 
 ```
 MIT License — 2026
-ADA Project Team · IEU Universidad · Puebla, México
+ARES Project Team · IEU Universidad · Puebla, México
 ```
 
 ---
@@ -239,7 +244,7 @@ ADA Project Team · IEU Universidad · Puebla, México
 <div align="center">
 
 ```
-[ ADA — AGENTE DE DEFENSA AUTÓNOMO ]
+[ ARES — AGENTE INTELIGENTE PARA CIBERSEGURIDAD ]
 [ SISTEMA DESARROLLADO CON FINES EDUCATIVOS ]
 [ IEU UNIVERSIDAD · PUEBLA · 2026 ]
 ```

@@ -13,7 +13,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
 
       {/* Contenedor del Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transform transition-transform duration-300 ease-in-out md:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-stone-700 text-white transform transition-transform duration-300 ease-in-out md:translate-x-0 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
